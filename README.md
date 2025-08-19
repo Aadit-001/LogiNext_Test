@@ -52,6 +52,39 @@ INSERT INTO customers (customer_id, order_time, travel_time) VALUES
 (4, 22, 20),
 (5, 24, 10),
 (6, 25, 10);
+```
 
--- then we run the program
-java MainApp
+### 2. Configure Your Project in the IDE
+Clone the Repository:
+
+git clone [https://github.com/YourGitHubUsername/LogiNext_Test.git](https://github.com/YourGitHubUsername/LogiNext_Test.git)
+cd LogiNext_Test
+
+Add External JARs:
+Download the .jar files provided in the github or from these links for MySQL Connector/J, Java-dotenv, and Kotlin Standard Library.
+## kotlin : https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib/2.2.20-Beta2
+## java_dotenv : https://mvnrepository.com/artifact/io.github.cdimascio/java-dotenv/5.2.2
+## mysql connector : https://dev.mysql.com/downloads/connector/j/
+
+In your IDE's project settings (e.g., VS Code's Java Projects panel), add these three .jar files to your project's Referenced Libraries.
+
+Create .env File:
+
+In the project's root directory, create a new file named .env.
+
+Add your MySQL password to this file in the format DB_PASS=Your_Password.
+
+
+### 3. Run the Application
+Open the project in your IDE.
+
+Run the MainApp.java file. The application will connect to the database, process the orders, and display the results in the console. No manual input is required during runtime.
+
+Expected Output
+Connected to the database successfully!
+C1 - D1
+C2 - D2
+C3 - D1
+C4 - D1
+C5 - D2
+C6 - No Food :-(
